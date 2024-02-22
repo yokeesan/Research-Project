@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="latestComment">
+    <center>
+        <h2 class="bg-warning text-light">Get the user's latest comments and predict the new-movie-rating</h2>
+    </center>
+    <br>
+
+    <form action="write" method="post">
+        <div class="form-group ml-3">
+            <video class="col-md-6" controls autoplay muted>
+                <source src="/static/Jailer.mp4" type="video/mp4">
+                    Your browser does not support.
+            </video>
+        </div>
+        <div class="col-md-6">
+            <div class="ml-3">
+                <label class="text-light" style="opacity: 0.9; font-size: medium;">Type your comment here...</label>
+            </div>
+            <textarea type="text" rows="4" class="col-12 ml-3" name="user_cmt"></textarea>
+            <input class="btn btn-primary ml-3 btn-md" type="submit" name="btnSubmit" value="post" style="cursor: pointer;">
+        </div>
+        <br><br>
+    </form>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><div class="text-light"> <h2>{{wrote_1}}</h2></div></center>
+            <center><h2 class="text-danger"><i> {{ error1 }} </i></h2></center>
+        </div>
+    </div>
+    <br><br>
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/TransalteToTanglish" style="padding: 15px; font-size: 18px;">Transalte to Tanglish</a></center>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><div class="text-light"> <h2>{{wrote_2}}</h2></div></center>
+            <center><h2 class="text-danger"><i> {{ error2 }} </i></h2></center>
+        </div>
+    </div>
+    <br><br>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/AddWithDataset" style="padding: 15px; font-size: 18px;">Add With Dataset</a></center>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><div class="text-light"> <h2>{{wrote_3 }}</h2></div></center>
+            <center><h2 class="text-danger"><i> {{ error3 }} </i></h2></center>
+        </div>
+    </div>
+    <br><br>
+
+    </div>
+
+    {% endblock %}

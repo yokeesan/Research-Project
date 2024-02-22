@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main_one{
+    width: 100%;
+    min-height: 96vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.4), rgba(43,67,114, 0.4) ), url('/static/img_01.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.main_two{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.3), rgba(43,67,114, 0.3) ), url('/static/img_01.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.translation{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.5), rgba(43,67,114, 0.5) ), url('/static/bac_01.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.sentimental{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.5), rgba(43,67,114, 0.5) ), url('/static/bac_02.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.genre{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.5), rgba(43,67,114, 0.5) ), url('/static/bac_03.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.latestComment{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.5), rgba(43,67,114, 0.5) ), url('/static/bac_04.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.aboutBody{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgba(43,67,114 ,0.5), rgba(43,67,114, 0.5) ), url('/static/bac_02.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}

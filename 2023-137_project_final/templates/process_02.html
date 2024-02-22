@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="sentimental">
+    <center><h2 class="bg-success text-light">Identification of 
+        key words and sentimental analysis</h2></center>
+    <br>
+
+    <form action = "uploadTanglish" method="post">
+        <h4 class="text-warning font-weight-bold ml-3">Import Tanglish Dataset (<i>.xlsx</i> ) </h4>
+        <div class="form-group ml-3">
+            <input class="form-control" type="file" name="upload-tanglish" value="" style="width: 500px; cursor: pointer;" ><br>
+            <input class="form-control btn-outline-light font-weight-bold" type="submit" name="btnSubmit" value="Import file" style="width: 300px; cursor: pointer;">
+        </div>
+        <br><br>
+    </form>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{tanglish_dataset | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/tokenization" style="padding: 15px; font-size: 18px;">Tokenization</a></center>
+    <br>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{tokens | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ err1 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/count" style="padding: 15px; font-size: 18px;">Get Count</a></center>
+    <br>
+    <br>
+    
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><div class="text-light"> <h2>{{counts}}</h2></div></center>
+            <center><h2 class="text-danger"><i> {{ err2 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/percentage" style="padding: 15px; font-size: 18px;">Get percentage</a></center>
+    <br>
+    <br>
+    
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><div class="text-light"> <h2>{{percentage}}</h2></div></center>
+            <center><h2 class="text-danger"><i> {{ err3 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/decision" style="padding: 15px; font-size: 18px;">Final decision</a></center>
+    <br>
+    <br>
+    
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><div class="text-light"> <h2>{{decision}}</h2></div></center>
+            <center><h2 class="text-danger"><i> {{ err4 }} </i></h2></center>
+        </div>
+        <br><br>
+    </div>
+ 
+</div>
+
+{% endblock %}
+

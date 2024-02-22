@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="translation">
+    <center><h2 class="bg-primary text-light">Language prediction & translation</h2></center>
+    <br>
+
+    <form action = "uploader" method="post">
+        <h4 class="text-warning font-weight-bold ml-3">Import file (<i>.xlsx</i> ) </h4>
+        <div class="form-group ml-3">
+            <input class="form-control" type="file" name="upload-excel" value="" style="width: 500px; cursor: pointer;" ><br>
+            <input class="form-control btn-outline-light font-weight-bold" type="submit" name="btnSubmit" value="Import file" style="width: 300px; cursor: pointer;">
+        </div>
+        <br><br>
+    </form>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light"> {{data | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/cleaningComments" style="padding: 15px; font-size: 18px;">Cleaning comments</a></center>
+    <br>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{cleanedComments | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error1 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/predictLanguage" style="padding: 15px; font-size: 18px;">Language prediction</a></center>
+    <br>
+    <br>
+    
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{translation | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error2 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/basicNLTK" style="padding: 15px; font-size: 18px;">Basic nltk process</a></center>
+    <br>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{basicNLTK | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error3 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/translateToTamil" style="padding: 15px; font-size: 18px;">Translate to tamil language</a></center>
+    <br>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{traslateToTamil | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error4 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/tanglish" style="padding: 15px; font-size: 18px;">Tanglish comments</a></center>
+    <br>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <div class="table table-light table-responsive"> {{tanglishComments | safe}}</div>
+            <center><h2 class="text-danger"><i> {{ error5 }} </i></h2></center>
+        </div>
+    </div>
+
+    <br>
+    <center><a class="badge badge-pill badge-warning" href="/save" style="padding: 15px; font-size: 18px;">Save</a></center>
+    <br>
+    <br>
+
+    <div class="container-fluid text-dark font-weight-bold mx-auto" style="width: 90%;">
+        <div class="table-responsive" style="opacity: 0.8;">
+            <center><h2 class="text-danger"><i> {{ msg_02 }} </i></h2></center>
+            <center><h2 class="text-success"><i> {{ msg_01 }} </i></h2></center>
+        </div>
+    </div>
+    
+
+    <br>
+</div>
+
+{% endblock %}
+
